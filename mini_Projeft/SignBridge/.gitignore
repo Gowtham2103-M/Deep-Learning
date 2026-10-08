@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+# Node
+node_modules/
+frontend/dist/
+# Project data (large / generated)
+dataset/*
+!dataset/README.md
+models/*
+!models/README.md
+reports/*
+!reports/.gitkeep
+config.json

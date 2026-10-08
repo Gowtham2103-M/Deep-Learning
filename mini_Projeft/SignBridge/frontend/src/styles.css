@@ -1,0 +1,52 @@
+:root {
+  --bg: #f4f6fb; --card: #ffffff; --text: #16202e; --muted: #64748b; --line: #e2e8f0;
+  --primary: #2563eb; --danger: #dc2626; --warn: #b45309; --warn-bg: #fffbeb;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --line: #334155; --warn-bg: #3b2f0b; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.page { max-width: 1080px; margin: 0 auto; padding: 24px 16px 48px; }
+header { text-align: center; margin-bottom: 16px; }
+header h1 { margin: 0; letter-spacing: 4px; color: var(--primary); }
+header p { margin: 4px 0 10px; color: var(--muted); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 20px; margin: 16px 0; }
+.card h2 { margin-top: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 760px) { .grid-2 { grid-template-columns: 1fr; } }
+.video-wrap { position: relative; background: #0b1220; border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; }
+.video-wrap video { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+.video-overlay { position: absolute; inset: 0; display: grid; place-items: center; color: #94a3b8; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 12px 0; }
+.btn { border: 1px solid var(--line); background: var(--card); color: var(--text); padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 15px; }
+.btn:hover:not(:disabled) { border-color: var(--primary); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn.danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+.btn.small { padding: 6px 12px; font-size: 13px; }
+.check { display: flex; gap: 6px; align-items: center; color: var(--muted); }
+.bar { height: 6px; background: var(--line); border-radius: 4px; overflow: hidden; }
+.bar > div { height: 100%; background: var(--primary); transition: width 0.2s; }
+.prediction { background: var(--bg); border-radius: 10px; padding: 16px; }
+.prediction h3, .recognized h3, .card h3 { margin: 0 0 8px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+.pred-label { font-size: 30px; font-weight: 700; line-height: 1.2; margin: 6px 0; word-break: break-word; }
+.pred-label.faded { opacity: 0.4; }
+.topk { list-style: none; padding: 0; margin: 10px 0; font-size: 14px; }
+.topk li { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--line); padding: 4px 0; }
+.latency { margin-top: 10px; font-size: 14px; }
+.recognized { margin-top: 16px; border-top: 1px solid var(--line); padding-top: 12px; }
+.big-text { font-size: 26px; font-weight: 700; min-height: 36px; margin-bottom: 10px; word-break: break-word; }
+.muted { color: var(--muted); font-size: 14px; }
+.text-input { flex: 1; min-width: 200px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); font-size: 15px; }
+.match video { width: 100%; max-width: 480px; border-radius: 10px; display: block; margin: 10px 0; background: #000; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 8px; }
+@media (max-width: 760px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+.metrics div { background: var(--bg); border-radius: 10px; padding: 12px; }
+.metrics span { display: block; color: var(--muted); font-size: 13px; }
+.metrics strong { font-size: 22px; }
+.banner { padding: 10px 14px; border-radius: 8px; margin: 10px 0; background: var(--bg); border: 1px solid var(--line); font-size: 14px; }
+.banner-warn { background: var(--warn-bg); border-color: #f59e0b; color: var(--warn); }
+.banner-error { background: #fef2f2; border-color: var(--danger); color: var(--danger); }
+.banner-info { border-color: var(--primary); }
+footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 24px; }

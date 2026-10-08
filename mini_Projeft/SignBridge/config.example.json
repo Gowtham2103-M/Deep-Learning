@@ -1,0 +1,23 @@
+{
+  "_comment": "Copy this file to config.json (same folder) and change only what you need. Delete keys you do not want to change. Paths are relative to the project folder.",
+  "DATASET_PATH": "dataset/ISL_CSLRT_Corpus",
+  "NUM_CLASSES": null,
+  "CSV_FILE": null,
+  "VIDEO_COLUMN": null,
+  "LABEL_COLUMN": null,
+  "SIGNER_COLUMN": null,
+  "NUM_FRAMES": 30,
+  "IMAGE_SIZE": 224,
+  "BATCH_SIZE": 16,
+  "EPOCHS": 60,
+  "LEARNING_RATE": 0.001,
+  "CNN_BACKBONE": "mobilenet_v2",
+  "CNN_PRETRAINED": true,
+  "USE_MEDIAPIPE": false,
+  "MEDIAPIPE_PARTS": "hands,pose,face",
+  "MODEL_PATH": "models/signbridge_head.pt",
+  "CONFIDENCE_THRESHOLD": 0.6,
+  "MATCH_THRESHOLD": 0.75,
+  "WINDOW_SECONDS": 3.0,
+  "CAPTURE_FPS": 10
+}
